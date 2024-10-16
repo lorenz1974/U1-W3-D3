@@ -30,7 +30,7 @@ const addTaskToTable = (taskDescription) => {
   newTaskStatusTd.innerHTML = 'In progress'
   newTaskStatusTd.classList.add('taskStatus')
   newTaskStatusTd.setAttribute('id', 'taskStatus' + i)
-  newTaskStatusTd.addEventListener('click', () => changeTaskStatus(i))
+  newTaskStatusTd.addEventListener('click', () => changeTaskStatus(lastTaskId))
 
   // accodo il nuovo TD status alla nuova TR
   newTaskTr.appendChild(newTaskStatusTd)
