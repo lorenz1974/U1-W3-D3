@@ -19,7 +19,7 @@ const addTaskToTable = (taskDescription) => {
 
   // Creo il TD del task
   const newTaskTd = document.createElement('td')
-  newTaskTd.textContent = taskDescription
+  newTaskTd.innerHTML = taskDescription
   newTaskTd.classList.add('taskDescription')
   newTaskTd.setAttribute('id', 'taskDescription' + i)
   // accodo il nuovo TD descrizione alla nuova TR
@@ -27,10 +27,10 @@ const addTaskToTable = (taskDescription) => {
 
   // Creo il TD dello status
   const newTaskStatusTd = document.createElement('td')
-  newTaskStatusTd.innerHTML = 'In progress'
+  newTaskStatusTd.innerHTML = '<i class="fa-regular fa-circle"></i> In progress'
   newTaskStatusTd.classList.add('taskStatus')
   newTaskStatusTd.setAttribute('id', 'taskStatus' + i)
-  newTaskStatusTd.addEventListener('click', () => changeTaskStatus(lastTaskId))
+  newTaskStatusTd.addEventListener('click', () => changeTaskStatus(i))
 
   // accodo il nuovo TD status alla nuova TR
   newTaskTr.appendChild(newTaskStatusTd)
@@ -67,12 +67,13 @@ const deleteTask = (taskId) => {
 const changeTaskStatus = (taskId) => {
   console.log('changeTaskStatus: ', taskId)
   const taskStatus = document.getElementById('taskStatus' + taskId)
-  if (taskStatus.innerText === 'In progress') {
-    taskStatus.innerText = 'Done'
+  // Se il task non è 'Done' allora lo passo a 'Done' altrimenti ad 'In progress'
+  if (taskStatus.innerHTML.includes('Done') === false) {
+    taskStatus.innerHTML = '<i class="fa-solid fa-circle"></i> Done'
     const taskRow = document.getElementById('taskDescription' + taskId)
     taskRow.classList.add('taskCompleted')
   } else {
-    taskStatus.innerText = 'In progress'
+    taskStatus.innerHTML = '<i class="fa-regular fa-circle"></i> In progress'
     const taskRow = document.getElementById('taskDescription' + taskId)
     taskRow.classList.remove('taskCompleted')
   }
@@ -89,4 +90,4 @@ addTaskToTable('Definire il layout dello scheduler')
 addTaskToTable('Abbozzare il CSS')
 addTaskToTable('Scrivere e testare i JS')
 addTaskToTable('Rifinire CSS e JS')
-addTaskToTable('Pushare prima delle 16.57!!!')
+addTaskToTable('<b>Pushare</b> prima delle 16.57!!!')

@@ -19,6 +19,13 @@ footer {
   margin: 2rem;
 }
 
+footer a {
+  font-size: 0.9rem;
+  color: #ff00db;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 label,
 button {
   font-weight: bold;
@@ -108,6 +115,15 @@ li {
   font-size: 1rem;
   margin: 1rem;
   list-style: inside;
+}
+
+div {
+  margin: 1rem;
+}
+
+strong,
+b {
+  font-weight: bold;
 }
 
 #container {
