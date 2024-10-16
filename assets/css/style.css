@@ -1,5 +1,5 @@
 body {
-  height: 100vh;
+  height: 120vh;
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.2rem;
   margin: 1rem;
@@ -16,7 +16,7 @@ body {
 }
 footer {
   text-align: center;
-  margin: 3rem;
+  margin: 2rem;
 }
 
 label,
@@ -88,9 +88,12 @@ p {
 h1 {
   font-size: 2rem;
 }
-
+h1 > i {
+  margin-left: 1rem;
+  color: #ff00db;
+}
 h2 {
-  margin-top: 2rem;
+  margin-top: 0;
   text-align: left;
   font-size: 1.2rem;
 }
