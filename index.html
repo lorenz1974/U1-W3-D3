@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My task scheduler</title>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <h1>My task scheduler</h1>
+        </header>
+        <main>
+            <form id="newTaskForm">
+                <label for="myNewTask">Cosa devo fare?</label>
+                <input type="text" id="myNewTask" name="myNewTask" placeholder="Inserisci un nuovo task..."
+                    maxlength="50" size="55rem">
+                <button type="submit">Aggiungi</button>
+            </form>
+            <section>
+                <table id="tasksTable">
+                    <thead>
+                        <tr>
+                            <th class="taskDescription">Task</th>
+                            <th class="taskStatus">Stato</th>
+                            <th class="taskDelete">Elimina</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Non serve inserire nulla, ci pensano i JS al caricamento -->
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h2>Istruzioni</h2>
+                <ul>
+                    <li>Clicca sullo stato per cambiarlo</li>
+                    <li>Clicca su elimina per rimuovere il task</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2020 My task scheduler</p>
+        </footer>
+    </div>
+    <script src="./myTaskScheduler.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.2rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+label,
+button {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+button {
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+form {
+  text-align: center;
+  padding: 0;
+  margin: 0, 2rem;
+}
+input[type='text'] {
+  font-size: 1.2rem;
+}
+table {
+  margin-top: 2rem;
+}
+#container {
+  text-align: center;
+  width: 45rem;
+  margin: 0 auto;
+  padding: 0 20px;
+  border: 1px solid #ccc;
+}
+#newTaskForm {
+  width: 100%;
+  border: 1px solid #ccc;
+}
+#myNewTask {
+  padding: 1rem;
+}
+.taskDescription {
+  width: 60%;
+  text-align: left;
+}
+.taskStatus {
+  width: 35%;
+}
+td,
+th {
+  padding: 0.3rem;
+  font-size: 1.2rem;
+}
+.taskDelete {
+  width: 5%;
+}
+
+h1,
+h2,
+h3,
+th,
+p {
+  color: #333;
+  font-weight: bold;
+}
+h1 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+h2 {
+  text-align: left;
+  font-size: 1.2rem;
+}
+p,
+li {
+  text-align: left;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.taskCompleted {
+  text-decoration: line-through;
+}
+
+th {
+  height: 3rem;
+  background-color: #333;
+  color: #fff;
+  vertical-align: middle;
+}
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
