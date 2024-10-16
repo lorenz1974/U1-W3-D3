@@ -1,8 +1,18 @@
 body {
+  height: 100vh;
   font-family: 'Noto Sans', sans-serif;
   font-size: 1.2rem;
   margin: 1rem;
   padding: 1rem;
+
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    22deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background-attachment: fixed;
 }
 footer {
   text-align: center;
@@ -50,8 +60,11 @@ th {
 th {
   height: 3rem;
   background-color: #333;
-  color: #fff;
   vertical-align: middle;
+}
+
+table thead th {
+  color: white;
 }
 
 tr:nth-child(odd) {
@@ -96,6 +109,7 @@ li {
   margin: 0 auto;
   padding: 0 20px;
   border: 1px solid #ccc;
+  background-color: white;
 }
 
 #newTaskForm {
@@ -107,6 +121,12 @@ li {
   padding: 1rem;
 }
 
+#instructions {
+  margin-top: 2rem;
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 1rem;
+}
 .taskDescription {
   width: 60%;
   text-align: left;

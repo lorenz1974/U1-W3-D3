@@ -15,13 +15,13 @@ const addTaskToTable = (taskDescription) => {
   // Creo una nuova riga per la tabella
   const newTaskTr = document.createElement('tr')
   newTaskTr.classList.add('taskRow')
-  newTaskTr.setAttribute('id', 'taskRow' + lastTaskId)
+  newTaskTr.setAttribute('id', 'taskRow' + i)
 
   // Creo il TD del task
   const newTaskTd = document.createElement('td')
   newTaskTd.textContent = taskDescription
   newTaskTd.classList.add('taskDescription')
-  newTaskTd.setAttribute('id', 'taskDescription' + lastTaskId)
+  newTaskTd.setAttribute('id', 'taskDescription' + i)
   // accodo il nuovo TD descrizione alla nuova TR
   newTaskTr.appendChild(newTaskTd)
 
@@ -29,7 +29,7 @@ const addTaskToTable = (taskDescription) => {
   const newTaskStatusTd = document.createElement('td')
   newTaskStatusTd.innerHTML = 'In progress'
   newTaskStatusTd.classList.add('taskStatus')
-  newTaskStatusTd.setAttribute('id', 'taskStatus' + lastTaskId)
+  newTaskStatusTd.setAttribute('id', 'taskStatus' + i)
   newTaskStatusTd.addEventListener('click', () => changeTaskStatus(i))
 
   // accodo il nuovo TD status alla nuova TR
@@ -38,11 +38,11 @@ const addTaskToTable = (taskDescription) => {
   // Creo il TD del bottone di ELIMINA
   const newTaskDeleteTd = document.createElement('td')
   newTaskDeleteTd.classList.add('taskDelete')
-  newTaskDeleteTd.setAttribute('id', 'taskDelete' + lastTaskId)
+  newTaskDeleteTd.setAttribute('id', 'taskDelete' + i)
   // Creo il bottone ELIMINA
   const newDeleteButton = document.createElement('button')
   newDeleteButton.textContent = 'Elimina'
-  newDeleteButton.setAttribute('id', 'buttonDelete' + lastTaskId)
+  newDeleteButton.setAttribute('id', 'buttonDelete' + i)
 
   newDeleteButton.addEventListener('click', () => deleteTask(i))
 
@@ -54,7 +54,7 @@ const addTaskToTable = (taskDescription) => {
   // Accodo la TR alla tabella
   taskTable.appendChild(newTaskTr)
 
-  console.log('lastTaskId: ', lastTaskId)
+  console.log('i: ', i)
 }
 
 const deleteTask = (taskId) => {
@@ -88,3 +88,5 @@ form.addEventListener('submit', (e) => {
 addTaskToTable('Definire il layout dello scheduler')
 addTaskToTable('Abbozzare il CSS')
 addTaskToTable('Scrivere e testare i JS')
+addTaskToTable('Rifinire CSS e JS')
+addTaskToTable('Pushare prima delle 16.57!!!')
